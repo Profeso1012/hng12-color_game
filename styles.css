@@ -18,6 +18,11 @@ body {
 
 }
 
+.h-100 {
+    display: flex; 
+    gap: 50px;
+}
+
 /* Instructions Panel */
 .instructions-panel {
     background: rgba(255, 255, 255, 0.95);
@@ -28,6 +33,7 @@ body {
     overflow-y: auto;
     padding-left: 2rem;
     padding-right: 2rem;
+    margin-left: 30px;
 
 }
 
@@ -103,12 +109,13 @@ body {
 /* Target Color */
 .target-color-container {
     margin: 1rem 0;
+    margin-bottom: 3px;
     flex-grow: 0;
 }
 
 .target-color {
     width: 100%;
-    height: 150px;
+    height: 100px;
     border-radius: 15px;
     margin: 0 auto;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -125,11 +132,13 @@ body {
 
 .color-options .row {
     margin: 0.5rem 0;
+    margin-top: 2px;
 }
 
 .color-option {
-    width: 80px; /* Set the desired width */
-    padding-bottom: 80px; /* Match padding-bottom to width to maintain square aspect ratio */
+    width: 250px; /* Set the desired width */
+    /*padding-bottom: 80px; /* Match padding-bottom to width to maintain square aspect ratio */
+    height: 80px;
     border-radius: 15px;
     cursor: pointer;
     transition: transform 0.3s ease;
@@ -158,10 +167,9 @@ body {
 /* New Game Button */
 .new-game-btn {
     align-self: center;
-    margin-top: 1rem;
-    background: #00BCD4;
+    background: #052031;
     color: white;
-    border: none;
+    border: 2px solid red;
     padding: 0.75rem 2rem;
     border-radius: 25px;
     font-size: 1rem;
