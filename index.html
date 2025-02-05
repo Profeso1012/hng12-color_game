@@ -1,0 +1,88 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Guessing Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container-fluid game-container">
+        <div class="row h-100 gx-3"> <!-- Add gx-3 class for horizontal gap -->
+            <!-- Instructions Panel -->
+            <div class="col-md-3 instructions-panel animate__animated animate__fadeIn">
+                <h2 class="text-center mb-4">How to Play</h2>
+                <div class="instruction-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <p>Look at the target color</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <p>Find the matching color<br>from the options below</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <p>Click to make your<br>guess!</p>
+                    </div>
+                    <div class="tip-box">
+                        <p><i>Tip: The faster you guess correctly, the more points!</i></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Game Area -->
+            <div class="col-md-8 game-area"> <!-- Change col-md-9 to col-md-8 -->
+                <div class="score-display" data-testid="score">
+                    <span class="score-label">Score</span>
+                    <span class="score-value">0</span>
+                </div>
+
+                <h1 class="game-title animate__animated animate__bounceIn">
+                    🎨 Color Guessing Game
+                </h1>
+
+                <!-- Target Color -->
+                <div class="target-color-container">
+                    <div class="target-color" data-testid="colorBox"></div>
+                    <p class="text-center mt-3" data-testid="gameInstructions">Guess this color!</p>
+                </div>
+
+                <!-- Color Options Grid -->
+                <div class="color-options">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="color-option" data-testid="colorOption"></div>
+                        </div>
+                        <div class="col-4">
+                            <div class="color-option" data-testid="colorOption"></div>
+                        </div>
+                        <div class="col-4">
+                            <div class="color-option" data-testid="colorOption"></div>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-4">
+                            <div class="color-option" data-testid="colorOption"></div>
+                        </div>
+                        <div class="col-4">
+                            <div class="color-option" data-testid="colorOption"></div>
+                        </div>
+                        <div class="col-4">
+                            <div class="color-option" data-testid="colorOption"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Game Button -->
+                <div class="text-center mt-4">
+                    <button class="new-game-btn" data-testid="newGameButton">New Game</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+/* styles.css */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #4158D0, #C850C0, #4158D0);
+    font-family: Arial, sans-serif;
+}
+
+.game-container {
+    height: 100vh;
+    padding: 2rem;
+    gap: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+}
+
+/* Instructions Panel */
+.instructions-panel {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    height: 90vh;
+    overflow-y: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+}
+
+.instruction-steps {
+    margin-top: 2rem;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background: #00BCD4;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 1rem;
+}
+
+.tip-box {
+    background: rgba(0, 188, 212, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+    color: #00838F;
+}
+
+/* Game Area */
+.game-area {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    height: 90vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Score Display */
+.score-display {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.score-label {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.score-value {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Target Color */
+.target-color-container {
+    margin: 1rem 0;
+    flex-grow: 0;
+}
+
+.target-color {
+    width: 100%;
+    height: 150px;
+    border-radius: 15px;
+    margin: 0 auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to bottom, rgba(255,255,255,0.3), rgba(255,255,255,0));
+}
+
+/* Color Options */
+.color-options {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.color-options .row {
+    margin: 0.5rem 0;
+}
+
+.color-option {
+    width: 80px; /* Set the desired width */
+    padding-bottom: 80px; /* Match padding-bottom to width to maintain square aspect ratio */
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.color-option:hover {
+    transform: scale(1.05);
+}
+
+.color-option::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.3), rgba(255,255,255,0));
+    border-radius: 15px;
+}
+
+/* New Game Button */
+.new-game-btn {
+    align-self: center;
+    margin-top: 1rem;
+    background: #00BCD4;
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.new-game-btn:hover {
+    transform: scale(1.05);
+    background: #00ACC1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .instructions-panel, .game-area {
+        height: auto;
+    }
+    .game-container {
+        gap: 1rem; /* Slightly less space on smaller screens */
+    }
+}
